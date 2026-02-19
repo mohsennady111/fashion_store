@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإرجاع والاستبدال - متجر الأزياء</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="return.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-indicator" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">متجر الأزياء</a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن المنتجات..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#categories" class="nav-link">الفئات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shipping.html" class="nav-link">الشحن والتوصيل</a>
+                </li>
+                <li class="nav-item">
+                    <a href="return.html" class="nav-link active">الإرجاع والاستبدال</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#favorites" class="nav-link favorite-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="return-hero">
+        <div class="container">
+            <div class="return-hero-content">
+                <h1>سياسة الإرجاع والاستبدال</h1>
+                <p>نسعى لضمان رضاك التام عن مشترياتك مع سياسة إرجاع مرنة وسهلة</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="return-content">
+        <div class="container">
+            <div class="return-quick-info">
+                <div class="info-card">
+                    <i class="fas fa-undo-alt"></i>
+                    <h3>14 يوم للإرجاع</h3>
+                    <p>مهلة 14 يوم لإرجاع المنتجات</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>استبدال مجاني</h3>
+                    <p>استبدال مجاني خلال 7 أيام</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>شحن مجاني</h3>
+                    <p>شحن مجاني لطلبات الإرجاع</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>استرداد كامل</h3>
+                    <p>استرداد المبلغ خلال 5 أيام</p>
+                </div>
+            </div>
+
+            <div class="return-policies">
+                <div class="policy-section">
+                    <h2><i class="fas fa-clipboard-check"></i> شروط الإرجاع العامة</h2>
+                    <div class="policy-grid">
+                        <div class="policy-item">
+                            <h3>الشروط الأساسية</h3>
+                            <ul class="check-list">
+                                <li>يجب أن يكون المنتج في حالته الأصلية</li>
+                                <li>الملصقات والعلامات يجب أن تكون سليمة</li>
+                                <li>التغليف الأصلي غير تالف</li>
+                                <li>فواتير الشراء مرفقة</li>
+                                <li>لم يتم استخدام المنتج أو غسله</li>
+                            </ul>
+                        </div>
+                        <div class="policy-item">
+                            <h3>فترة السماح</h3>
+                            <ul class="check-list">
+                                <li>14 يوم من تاريخ الاستلام للإرجاع</li>
+                                <li>7 أيام للاستبدال المجاني</li>
+                                <li>30 يوم للمنتجات المعيبة</li>
+                                <li>لا توجد فترة سماح للمنتجات الشخصية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-list-ol"></i> خطوات عملية الإرجاع</h2>
+                    <div class="steps-timeline">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>تقديم طلب الإرجاع</h4>
+                                <p>املأ نموذج طلب الإرجاع عبر الموقع أو اتصل بنا</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>انتظار الموافقة</h4>
+                                <p>سيتم مراجعة طلبك والرد خلال 24 ساعة</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>تسليم المنتج</h4>
+                                <p>سنتولى استلام المنتج من عنوانك مجاناً</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>استلام المبلغ</h4>
+                                <p>سيتم استرداد المبلغ خلال 3-5 أيام عمل</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-ban"></i> منتجات غير قابلة للإرجاع</h2>
+                    <div class="non-returnable">
+                        <div class="non-returnable-item">
+                            <i class="fas fa-tshirt"></i>
+                            <div>
+                                <h4>الملابس الداخلية</h4>
+                                <p>لأسباب صحية، لا يمكن إرجاع الملابس الداخلية</p>
+                            </div>
+                        </div>
+                        <div class="non-returnable-item">
+                            <i class="fas fa-socks"></i>
+                            <div>
+                                <h4>الجوارب</h4>
+                                <p>لا يمكن إرجاع الجوارب بعد فتح العبوة</p>
+                            </div>
+                        </div>
+                        <div class="non-returnable-item">
+                            <i class="fas fa-gem"></i>
+                            <div>
+                                <h4>المجوهرات الشخصية</h4>
+                                <p>المجوهرات والإكسسوارات الشخصية</p>
+                            </div>
+                        </div>
+                        <div class="non-returnable-item">
+                            <i class="fas fa-cut"></i>
+                            <div>
+                                <h4>المنتجات المعدلة</h4>
+                                <p>المنتجات التي تم تعديلها أو خياطتها</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-file-alt"></i> طلب إرجاع أو استبدال</h2>
+                    <div class="return-form-section">
+                        <div class="form-container">
+                            <form class="return-form" id="returnForm">
+                                <div class="form-group">
+                                    <label for="orderNumber">رقم الطلب *</label>
+                                    <input type="text" id="orderNumber" name="orderNumber" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="productName">اسم المنتج *</label>
+                                    <input type="text" id="productName" name="productName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="returnType">نوع الطلب *</label>
+                                    <select id="returnType" name="returnType" required>
+                                        <option value="">اختر نوع الطلب</option>
+                                        <option value="return">إرجاع واسترداد مالي</option>
+                                        <option value="exchange">استبدال بحجم آخر</option>
+                                        <option value="exchange_color">استبدال بلون آخر</option>
+                                        <option value="defective">منتج معيب</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="reason">سبب الإرجاع *</label>
+                                    <select id="reason" name="reason" required>
+                                        <option value="">اختر السبب</option>
+                                        <option value="wrong_size">الحجم غير مناسب</option>
+                                        <option value="wrong_color">اللون غير مناسب</option>
+                                        <option value="defective">منتج معيب</option>
+                                        <option value="not_as_described">لا يتطابق مع الوصف</option>
+                                        <option value="other">سبب آخر</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="description">وصف المشكلة *</label>
+                                    <textarea id="description" name="description" rows="4" required placeholder="يرجى وصف المشكلة بالتفصيل..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactEmail">البريد الإلكتروني *</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactPhone">رقم الهاتف *</label>
+                                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">إرسال طلب الإرجاع</button>
+                                    <button type="reset" class="reset-btn">إعادة تعيين</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h2>
+                    <div class="faq-section">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>كم تستغرق عملية استرداد المبلغ؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>تستغرق عملية استرداد المبلغ من 3 إلى 5 أيام عمل بعد استلام المنتج وتفحصه.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>هل يمكنني استبدال المنتج بحجم آخر؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، يمكنك استبدال المنتج بحجم آخر مجاناً خلال 7 أيام من تاريخ الاستلام.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>ماذا لو كان المنتج معيباً؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>للمنتجات المعيبة فترة سماح 30 يوم، وسنقوم باستبدالها أو إرجاع قيمتها كاملة.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>هل أتحمل تكاليف شحن الإرجاع؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>لا، نحن نتحمل تكاليف شحن الإرجاع لجميع الطلبات ضمن شروط الإرجاع.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="return-contact">
+        <div class="container">
+            <div class="contact-promo">
+                <h2>هل تحتاج مساعدة في عملية الإرجاع؟</h2>
+                <p>فريق خدمة العملاء جاهز لمساعدتك في أي استفسار</p>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <i class="fas fa-phone"></i>
+                        <h4>اتصل بنا</h4>
+                        <p>01029793816</p>
+                        <span>مخصص لطلبات الإرجاع</span>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-envelope"></i>
+                        <h4>راسلنا</h4>
+                        <p>nadym1143@gmail.com</p>
+                        <span>رد خلال 24 ساعة</span>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-comments"></i>
+                        <h4>الدردشة المباشرة</h4>
+                        <p>متاحة 24/7</p>
+                        <span>للاستفسارات السريعة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الأزياء</h3>
+                    <p>وجهتك الأولى لشراء الملابس عبر الإنترنت</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#products">المنتجات</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="return.html" class="active">الإرجاع والاستبدال</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="tracking.html">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="اشترك في النشرة البريدية">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر الأزياء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 $</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="return.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشحن والتوصيل - متجر الأزياء</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shipping.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-indicator" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">متجر الأزياء</a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن المنتجات..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#categories" class="nav-link">الفئات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shipping.html" class="nav-link active">الشحن والتوصيل</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#favorites" class="nav-link favorite-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="shipping-hero">
+        <div class="container">
+            <div class="shipping-hero-content">
+                <h1>الشحن والتوصيل</h1>
+                <p>نسعى لتقديم أفضل خدمة شحن وتوصيل لتجربة تسوق مميزة</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="shipping-content">
+        <div class="container">
+            <div class="shipping-quick-info">
+                <div class="info-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>شحن سريع</h3>
+                    <p>توصيل خلال 2-3 أيام عمل</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>توصيل مجاني</h3>
+                    <p>لطلبات فوق 500 جنيه</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>لجميع المدن</h3>
+                    <p>نغطي جميع مدن مصر</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم فني</h3>
+                    <p>خدمة عملاء على مدار الساعة</p>
+                </div>
+            </div>
+
+            <div class="shipping-policies">
+                <div class="policy-section">
+                    <h2><i class="fas fa-shipping-fast"></i> سياسات الشحن</h2>
+                    <div class="policy-grid">
+                        <div class="policy-item">
+                            <h3>مدة التوصيل</h3>
+                            <ul>
+                                <li>القاهرة ، الجيزة: 1-2 يوم عمل</li>
+                                <li>القليوبية: 2-3 أيام عمل</li>
+                                <li>المدن الأخرى: 3-5 أيام عمل</li>
+                                <li>المناطق النائية: 5-7 أيام عمل</li>
+                            </ul>
+                        </div>
+                        <div class="policy-item">
+                            <h3>تكاليف الشحن</h3>
+                            <ul>
+                                <li>مجاني للطلبات فوق 500 جنية</li>
+                                <li>50 جنية للطلبات تحت 300 جنية</li>
+                                <li>75 جنية للتوصيل السريع</li>
+                                <li>100 جنية للمناطق النائية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-truck-loading"></i> طرق الشحن المتاحة</h2>
+                    <div class="shipping-methods">
+                        <div class="method-card">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h4>التوصيل العادي</h4>
+                            <p>خدمة التوصيل القياسية خلال 3-5 أيام عمل</p>
+                            <span class="cost">50 جنية</span>
+                        </div>
+                        <div class="method-card featured">
+                            <i class="fas fa-rocket"></i>
+                            <h4>التوصيل السريع</h4>
+                            <p>توصيل خلال 24-48 ساعة لمعظم المدن</p>
+                            <span class="cost">75 جنية</span>
+                        </div>
+                        <div class="method-card">
+                            <i class="fas fa-store"></i>
+                            <h4>الاستلام من المعرض</h4>
+                            <p>استلام الطلب من معرضنا مجاناً</p>
+                            <span class="cost">مجاني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-map-marked-alt"></i> مناطق التوصيل</h2>
+                    <div class="delivery-areas">
+                        <div class="area-group">
+                            <h4>المدن الرئيسية</h4>
+                            <div class="cities-grid">
+                                <span class="city">القاهرة</span>
+                                <span class="city">الجيزة</span>
+                                <span class="city">القليوبية</span>
+                                <span class="city">الاسكندرية</span>
+                                <span class="city">طنطا</span>
+                                <span class="city">شرم الشيخ</span>
+                            </div>
+                        </div>
+                        <div class="area-group">
+                            <h4>المدن الأخرى</h4>
+                            <div class="cities-grid">
+                                <span class="city">الشرقية</span>
+                                <span class="city">الغربية</span>
+                                <span class="city">البحيرة</span>
+                                <span class="city">بني سويف</span>
+                                <span class="city">المنياء</span>
+                                <span class="city">الصعيد</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-box-open"></i> تتبع الطلب</h2>
+                    <div class="order-tracking">
+                        <div class="tracking-form">
+                            <h4>ادخل رقم طلبك لمتابعة شحنه</h4>
+                            <div class="input-group">
+                                <input type="text" placeholder="أدخل رقم الطلب" id="orderNumber">
+                                <button id="trackOrder"><i class="fas fa-search"></i> تتبع الطلب</button>
+                            </div>
+                        </div>
+                        <div class="tracking-result" id="trackingResult" style="display: none;">
+                            <div class="tracking-steps">
+                                <div class="step active">
+                                    <div class="step-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>تم تأكيد الطلب</h5>
+                                        <p>تم استلام طلبك بنجاح</p>
+                                        <span class="step-time">اليوم 10:00 ص</span>
+                                    </div>
+                                </div>
+                                <div class="step active">
+                                    <div class="step-icon">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>جاري التجهيز</h5>
+                                        <p>طلبك قيد التجهيز للتوصيل</p>
+                                        <span class="step-time">اليوم 11:30 ص</span>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>قيد الشحن</h5>
+                                        <p>سيتم شحن طلبك قريباً</p>
+                                        <span class="step-time">--</span>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>تم التوصيل</h5>
+                                        <p>سيتم توصيل طلبك إلى عنوانك</p>
+                                        <span class="step-time">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h2>
+                    <div class="faq-section">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>كم تستغرق مدة التوصيل؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>مدة التوصيل تتراوح بين 1-7 أيام عمل حسب المدينة وطريقة الشحن المختارة. التوصيل السريع خلال 24-48 ساعة للمدن الرئيسية.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>هل التوصيل مجاني؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، التوصيل مجاني لجميع الطلبات التي تزيد عن 500 جنية. للطلبات الأقل من ذلك، تبلغ رسوم التوصيل 50 جنية.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>هل يمكنني تغيير عنوان التوصيل؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، يمكنك تغيير عنوان التوصيل قبل شحن الطلب. اتصل بنا على 01029793816 أو راسلنا عبر البريد الإلكتروني.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>ماذا لو لم أكن في المنزل أثناء التوصيل؟</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>سيتصل بك مندوب التوصيل قبل الوصول. إذا لم تتمكن من الاستلام، سيتم إعادة المحاولة في اليوم التالي أو يمكنك الاستلام من أقرب فرع.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shipping-contact">
+        <div class="container">
+            <div class="contact-promo">
+                <h2>هل لديك استفسارات أخرى حول الشحن؟</h2>
+                <p>فريق خدمة العملاء جاهز لمساعدتك على مدار 24 الساعة</p>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <i class="fas fa-phone"></i>
+                        <h4>اتصل بنا</h4>
+                        <p>01029793816</p>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-envelope"></i>
+                        <h4>راسلنا</h4>
+                        <p>nadym1143@gmail.com</p>
+                    </div>
+                    <div class="contact-option">
+                        <i class="fas fa-comments"></i>
+                        <h4>الدردشة المباشرة</h4>
+                        <p>متاحة 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الأزياء</h3>
+                    <p>وجهتك الأولى لشراء الملابس عبر الإنترنت</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#products">المنتجات</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="shipping.html" class="active">الشحن والتوصيل</a></li>
+                        <li><a href="return.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="tracking.html">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="اشترك في النشرة البريدية">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر الأزياء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 $</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+
+    <script src="1/script.js"></script>
+    <script src="shipping.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تتبع الطلب - متجر الأزياء</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-indicator" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">متجر الأزياء</a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن المنتجات..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#categories" class="nav-link">الفئات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shipping.html" class="nav-link">الشحن والتوصيل</a>
+                </li>
+                <li class="nav-item">
+                    <a href="return.html" class="nav-link">الإرجاع والاستبدال</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">الأسئلة الشائعة</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tracking.html" class="nav-link active">تتبع الطلب</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#favorites" class="nav-link favorite-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="tracking-hero">
+        <div class="container">
+            <div class="tracking-hero-content">
+                <h1>تتبع طلبك</h1>
+                <p>تابع حالة طلبك خطوة بخطوة من التأكيد حتى التوصيل</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracking-content">
+        <div class="container">
+            <div class="tracking-search">
+                <div class="search-card">
+                    <h2><i class="fas fa-search"></i> ابحث عن طلبك</h2>
+                    <p>أدخل رقم الطلب أو البريد الإلكتروني لمتابعة شحنه</p>
+                    
+                    <div class="search-options">
+                        <button class="search-option active" data-type="order">رقم الطلب</button>
+                        <button class="search-option" data-type="email">البريد الإلكتروني</button>
+                        <button class="search-option" data-type="phone">رقم الهاتف</button>
+                    </div>
+                    
+                    <form class="tracking-form" id="trackingForm">
+                        <div class="form-group" id="orderNumberGroup">
+                            <label for="orderNumber">رقم الطلب *</label>
+                            <input type="text" id="orderNumber" name="orderNumber" placeholder="مثال: ORD-123456" required>
+                            <small>يمكنك العثور على رقم الطلب في بريد التأكيد</small>
+                        </div>
+                        
+                        <div class="form-group" id="emailGroup" style="display: none;">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني">
+                            <small>سيتم إرسال قائمة طلباتك إلى بريدك</small>
+                        </div>
+                        
+                        <div class="form-group" id="phoneGroup" style="display: none;">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="ادخل رقم هاتفك">
+                            <small>سيتم إرسال رمز التحقق إلى هاتفك</small>
+                        </div>
+                        
+                        <button type="submit" class="track-btn">
+                            <i class="fas fa-search"></i>
+                            تتبع الطلب
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tracking-results" id="trackingResults" style="display: none;">
+                <div class="order-info-card">
+                    <div class="order-header">
+                        <h3>معلومات الطلب</h3>
+                        <span class="order-status delivered" id="orderStatus">تم التوصيل</span>
+                    </div>
+                    
+                    <div class="order-details">
+                        <div class="detail-item">
+                            <span class="label">رقم الطلب:</span>
+                            <span class="value" id="displayOrderNumber">ORD-123456</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">تاريخ الطلب:</span>
+                            <span class="value" id="orderDate">15 مارس 2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">المجموع:</span>
+                            <span class="value" id="orderTotal">249.99 $</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">طريقة الدفع:</span>
+                            <span class="value" id="paymentMethod">الدفع عند الاستلام</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">طريقة الشحن:</span>
+                            <span class="value" id="shippingMethod">التوصيل السريع</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shipping-info-card">
+                    <h3>تفاصيل الشحن</h3>
+                    <div class="shipping-details">
+                        <div class="address-section">
+                            <h4>عنوان التوصيل</h4>
+                            <p id="shippingAddress">القاهرة - التجمع التالت - القطامية - عمارة 123 - الشقة 45</p>
+                        </div>
+                        <div class="contact-section">
+                            <h4>معلومات الاتصال</h4>
+                            <p id="customerName">محمد أحمد</p>
+                            <p id="customerPhone">+201154589632</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tracking-timeline-card">
+                    <h3>تتبع حالة الطلب</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>تم تأكيد الطلب</h4>
+                                <p>تم استلام طلبك بنجاح وتأكيد الدفع</p>
+                                <span class="timeline-time">15 مارس - 10:30 ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>جاري التجهيز</h4>
+                                <p>طلبك قيد التجهيز والتغليف في المستودع</p>
+                                <span class="timeline-time">15 مارس - 11:45 ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>تم الشحن</h4>
+                                <p>تم تسليم الطلب لشركة الشحن</p>
+                                <span class="timeline-time">16 مارس - 09:15 ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>في Transit</h4>
+                                <p>الطلب في الطريق إلى مركز التوزيع</p>
+                                <span class="timeline-time">16 مارس - 02:30 م</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>خارج للتوصيل</h4>
+                                <p>الطلب خارج للتوصيل من قبل مندوب التوصيل</p>
+                                <span class="timeline-time">17 مارس - 10:00 ص</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item current">
+                            <div class="timeline-marker">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>تم التوصيل</h4>
+                                <p>تم توصيل الطلب بنجاح إلى العنوان المحدد</p>
+                                <span class="timeline-time">17 مارس - 01:15 م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-products-card">
+                    <h3>منتجات الطلب</h3>
+                    <div class="products-list">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="Product Image/بدلة.jpg" alt="بدلة نسائي رسمية">
+                            </div>
+                            <div class="product-details">
+                                <h4>بدلة نسائي رسمية</h4>
+                                <p>الحجم: M - اللون: أسود</p>
+                                <span class="product-price">149.99 $</span>
+                            </div>
+                            <div class="product-quantity">
+                                الكمية: 1
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop" alt="بنطلون جينز نسائي">
+                            </div>
+                            <div class="product-details">
+                                <h4>بنطلون جينز نسائي</h4>
+                                <p>الحجم: 32 - اللون: أزرق</p>
+                                <span class="product-price">99.99 $</span>
+                            </div>
+                            <div class="product-quantity">
+                                الكمية: 1
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <div class="summary-item">
+                            <span>مجموع المنتجات:</span>
+                            <span>249.98 $</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>رسوم الشحن:</span>
+                            <span>0.00 $</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>الخصم:</span>
+                            <span>-20.00 $</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>المجموع النهائي:</span>
+                            <span>229.98 $</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <button class="action-btn primary">
+                        <i class="fas fa-print"></i>
+                        طباعة الفاتورة
+                    </button>
+                    <button class="action-btn secondary">
+                        <i class="fas fa-redo-alt"></i>
+                        طلب إرجاع
+                    </button>
+                    <button class="action-btn secondary">
+                        <i class="fas fa-headset"></i>
+                        مساعدة
+                    </button>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>طلبات حديثة للتجربة</h2>
+                <p>جرب تتبع هذه الطلبات لرؤية كيف يعمل النظام</p>
+                
+                <div class="orders-grid">
+                    <div class="order-sample">
+                        <h4>طلب رقم: ORD-789123</h4>
+                        <p>الحالة: <span class="status preparing">جاري التجهيز</span></p>
+                        <button class="try-btn" data-order="ORD-789123">جرب التتبع</button>
+                    </div>
+                    
+                    <div class="order-sample">
+                        <h4>طلب رقم: ORD-456789</h4>
+                        <p>الحالة: <span class="status shipping">قيد الشحن</span></p>
+                        <button class="try-btn" data-order="ORD-456789">جرب التتبع</button>
+                    </div>
+                    
+                    <div class="order-sample">
+                        <h4>طلب رقم: ORD-321654</h4>
+                        <p>الحالة: <span class="status delivered">تم التوصيل</span></p>
+                        <button class="try-btn" data-order="ORD-321654">جرب التتبع</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracking-faq">
+        <div class="container">
+            <h2>أسئلة شائعة حول تتبع الطلبات</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>كيف أحصل على رقم التتبع؟</h4>
+                    <p>سيتم إرسال رقم التتبع إلى بريدك الإلكتروني بعد شحن الطلب. يمكنك أيضاً العثور عليه في صفحة "طلباتي" في حسابك.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>لماذا لا يتم تحديث حالة الطلب؟</h4>
+                    <p>قد يستغرق تحديث حالة الطلب من 2-4 ساعات. إذا لم يتم التحديث بعد 24 ساعة، يرجى الاتصال بخدمة العملاء.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>كيف أتصل بمندوب التوصيل؟</h4>
+                    <p>سيتصل بك مندوب التوصيل قبل الوصول بـ 30 دقيقة. يمكنك أيضاً الحصول على رقمه من خلال صفحة تتبع الطلب.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>ماذا لو لم أكن في المنزل أثناء التوصيل؟</h4>
+                    <p>سيحاول مندوب التوصيل الاتصال بك. إذا لم تتمكن من الاستلام، سيتم إعادة المحاولة في اليوم التالي أو يمكنك التنسيق لاستلام الطلب من أقرب فرع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الأزياء</h3>
+                    <p>وجهتك الأولى لشراء الملابس عبر الإنترنت</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#products">المنتجات</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="return.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="tracking.html" class="active">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="اشترك في النشرة البريدية">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر الأزياء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 $</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="tracking.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - متجر الأزياء</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-indicator" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">متجر الأزياء</a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن المنتجات..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#categories" class="nav-link">الفئات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shipping.html" class="nav-link">الشحن والتوصيل</a>
+                </li>
+                <li class="nav-item">
+                    <a href="return.html" class="nav-link">الإرجاع والاستبدال</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">الأسئلة الشائعة</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tracking.html" class="nav-link">تتبع الطلب</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link active">تسجيل الدخول</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#favorites" class="nav-link favorite-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="login-hero">
+        <div class="container">
+            <div class="login-hero-content">
+                <h1>مرحباً بعودتك!</h1>
+                <p>سجل دخولك لتجربة تسوق مخصصة ومميزة</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="login-content">
+        <div class="container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2><i class="fas fa-user-circle"></i> تسجيل الدخول</h2>
+                    <p>ادخل بياناتك للوصول إلى حسابك</p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <div class="input-with-icon">
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">كلمة المرور *</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="password" name="password" placeholder="ادخل كلمة المرور" required>
+                            <i class="fas fa-lock"></i>
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span class="checkmark"></span>
+                            تذكرني
+                        </label>
+                        <a href="forgot-password.html" class="forgot-password">نسيت كلمة المرور؟</a>
+                    </div>
+
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        تسجيل الدخول
+                    </button>
+
+                    <div class="social-login">
+                        <p>أو سجل الدخول باستخدام</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                جوجل
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                فيسبوك
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="register-link">
+                        <p>ليس لديك حساب؟ <a href="register.html">أنشئ حساب جديد</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-benefits">
+                <h3>مزايا التسجيل في متجر الأزياء</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h4>تسوق أسرع</h4>
+                        <p>احفظ معلومات الشحن والدفع لتجربة تسوق أسرع</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>قائمة المفضلة</h4>
+                        <p>احفظ المنتجات المفضلة لديك واطلع عليها لاحقاً</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-bell"></i>
+                        <h4>عروض حصرية</h4>
+                        <p>احصل على إشعارات بالعروض والتخفيضات الخاصة</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-history"></i>
+                        <h4>سجل الطلبات</h4>
+                        <p>تابع طلباتك السابقة وسهولة إعادة الطلب</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الأزياء</h3>
+                    <p>وجهتك الأولى لشراء الملابس عبر الإنترنت</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#products">المنتجات</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="return.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                        <li><a href="tracking.html">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="اشترك في النشرة البريدية">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر الأزياء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 $</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

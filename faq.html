@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - متجر الأزياء</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="loading-indicator" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">متجر الأزياء</a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن المنتجات..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#products" class="nav-link">المنتجات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#categories" class="nav-link">الفئات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shipping.html" class="nav-link">الشحن والتوصيل</a>
+                </li>
+                <li class="nav-item">
+                    <a href="return.html" class="nav-link">الإرجاع والاستبدال</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link active">الأسئلة الشائعة</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#favorites" class="nav-link favorite-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorite-count">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="faq-hero">
+        <div class="container">
+            <div class="faq-hero-content">
+                <h1>الأسئلة الشائعة</h1>
+                <p>نجيب على جميع استفساراتك لتجربة تسوق أفضل</p>
+                <div class="search-faq">
+                    <input type="text" placeholder="ابحث في الأسئلة الشائعة..." id="faqSearch">
+                    <button id="faqSearchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-content">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">الكل</button>
+                <button class="category-btn" data-category="shipping">الشحن والتوصيل</button>
+                <button class="category-btn" data-category="returns">الإرجاع والاستبدال</button>
+                <button class="category-btn" data-category="products">المنتجات</button>
+                <button class="category-btn" data-category="payment">الدفع والسداد</button>
+                <button class="category-btn" data-category="account">الحساب والتسجيل</button>
+            </div>
+
+            <div class="faq-sections">
+                <div class="faq-section" data-category="shipping">
+                    <h2 class="section-title">
+                        <i class="fas fa-shipping-fast"></i>
+                        أسئلة حول الشحن والتوصيل
+                    </h2>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كم تستغرق مدة التوصيل؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>مدة التوصيل تتراوح بين 1-7 أيام عمل حسب المدينة:</p>
+                                <ul>
+                                    <li>القاهرة ، الجيزة: 1-2 يوم عمل</li>
+                                    <li>القليوبية: 2-3 أيام عمل</li>
+                                    <li>المدن الأخرى: 3-5 أيام عمل</li>
+                                    <li>المناطق النائية: 5-7 أيام عمل</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل التوصيل مجاني؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، التوصيل مجاني لجميع الطلبات التي تزيد عن 500 جنية. للطلبات الأقل من ذلك، تبلغ رسوم التوصيل 30 جنية للمدن الرئيسية.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنني تتبع طلبي؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، يمكنك تتبع طلبك عبر:</p>
+                                <ul>
+                                    <li>البريد الإلكتروني: سنرسل لك رقم التتبع</li>
+                                    <li>الموقع: قسم "تتبع الطلب"</li>
+                                    <li>التطبيق: خاصية التتبع المباشر</li>
+                                    <li>خدمة العملاء:01029793816</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تقدمون خدمة التوصيل السريع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم خدمة التوصيل السريع خلال 24-48 ساعة للمدن الرئيسية برسوم 150 جنية .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" data-category="returns">
+                    <h2 class="section-title">
+                        <i class="fas fa-undo-alt"></i>
+                        أسئلة حول الإرجاع والاستبدال
+                    </h2>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي مدة السماح للإرجاع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>مدة السماح للإرجاع هي 14 يوم من تاريخ استلام الطلب. للمنتجات المعيبة، المدة 30 يوم.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف يمكنني إرجاع منتج؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>خطوات إرجاع المنتج:</p>
+                                <ol>
+                                    <li>اذهب إلى قسم "طلباتي" في حسابك</li>
+                                    <li>اختر الطلب المراد إرجاعه</li>
+                                    <li>اختر المنتج وسبب الإرجاع</li>
+                                    <li>سنرسل لك رسالة تأكيد</li>
+                                    <li>سنتولى استلام المنتج من منزلك مجاناً</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي المنتجات التي لا يمكن إرجاعها؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>المنتجات التي لا يمكن إرجاعها تشمل:</p>
+                                <ul>
+                                    <li>الملابس الداخلية</li>
+                                    <li>الجوارب بعد فتح العبوة</li>
+                                    <li>المجوهرات الشخصية</li>
+                                    <li>المنتجات المعدلة أو المخيطة</li>
+                                    <li>المنتجات المستخدمة أو المغسولة</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كم تستغرق عملية استرداد المبلغ؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>تستغرق عملية استرداد المبلغ من 3 إلى 5 أيام عمل بعد استلام المنتج وتفحصه. سيتم الإرجاع بنفس طريقة الدفع الأصلية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-section" data-category="products">
+                    <h2 class="section-title">
+                        <i class="fas fa-tshirt"></i>
+                        أسئلة حول المنتجات
+                    </h2>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف أعرف مقاسي المناسب؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>يمكنك تحديد مقاسك المناسب عبر:</p>
+                                <ul>
+                                    <li>دليل المقاسات الموجود في صفحة كل منتج</li>
+                                    <li>أداة تحديد المقاس الذكية في التطبيق</li>
+                                    <li>خدمة الاستشارة عبر الواتساب</li>
+                                    <li>مراجعة مقاساتك من منتجات سابقة</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل المنتجات أصلية وذات جودة عالية؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، جميع منتجاتنا أصلية وذات جودة عالية. نحن نتعامل مباشرة مع الموردين المعتمدين ونضمن جودة كل منتج قبل شحنه.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تقدمون منتجات بحجم plus size؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، لدينا تشكيلة واسعة من المنتجات بحجم plus size. يمكنك تصفية المنتجات حسب المقاس لمشاهدة الخيارات المتاحة.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف أعرف إذا كان المنتج متوفراً؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>يمكنك معرفة توفر المنتج عبر:</p>
+                                <ul>
+                                    <li>العلامة الخضراء "متوفر" على صورة المنتج</li>
+                                    <li>خيار "إشعار عند التوفر" للمنتجات غير المتوفرة</li>
+                                    <li>الاتصال بخدمة العملاء للتحقق من التوفر</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" data-category="payment">
+                    <h2 class="section-title">
+                        <i class="fas fa-credit-card"></i>
+                        أسئلة حول الدفع والسداد
+                    </h2>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي طرق الدفع المتاحة؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>طرق الدفع المتاحة:</p>
+                                <ul>
+                                    <li>الدفع بالبطاقة الإئتمانية (Visa, MasterCard)</li>
+                                    <li>الدفع عند الاستلام</li>
+                                    <li>حساب Apple Pay</li>
+                                    <li>حساب STC Pay</li>
+                                    <li>التحويل البنكي</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل بياناتي البنكية آمنة؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، بياناتك البنكية آمنة تماماً. نستخدم أنظمة تشفير متقدمة ولا نخزن أي بيانات بنكية على خوادمنا.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنني الدفع عند الاستلام؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، يمكنك الدفع عند الاستلام لجميع الطلبات داخل مصر. الحد الأقصى للطلب نقداً هو 100 جنية.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ماذا لو فشلت عملية الدفع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>إذا فشلت عملية الدفع، ننصحك بـ:</p>
+                                <ul>
+                                    <li>التأكد من صحة بيانات البطاقة</li>
+                                    <li>التحقق من الرصيد المتاح</li>
+                                    <li>تجربة طريقة دفع أخرى</li>
+                                    <li>الاتصال ببنكك للاستفسار</li>
+                                    <li>الاتصال بخدمة العملاء للمساعدة</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section" data-category="account">
+                    <h2 class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        أسئلة حول الحساب والتسجيل
+                    </h2>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف يمكنني إنشاء حساب؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>لإنشاء حساب جديد:</p>
+                                <ol>
+                                    <li>انقر على "تسجيل الدخول" في أعلى الموقع</li>
+                                    <li>اختر "إنشاء حساب جديد"</li>
+                                    <li>املأ البيانات المطلوبة (الاسم، البريد الإلكتروني، كلمة المرور)</li>
+                                    <li>اضغط على رابط التفعيل في بريدك الإلكتروني</li>
+                                    <li>يمكنك الآن تسجيل الدخول والشراء</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>نسيت كلمة المرور، كيف استعيدها؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>لاستعادة كلمة المرور:</p>
+                                <ol>
+                                    <li>انقر على "نسيت كلمة المرور"</li>
+                                    <li>أدخل بريدك الإلكتروني المسجل</li>
+                                    <li>اضغط على رابط إعادة التعيين في بريدك</li>
+                                    <li>أنشئ كلمة مرور جديدة</li>
+                                    <li>سجل الدخول بكلمة المرور الجديدة</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنني الشراء بدون إنشاء حساب؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، يمكنك الشراء كضيف بدون إنشاء حساب. لكن ننصحك بإنشاء حساب للاستفادة من:</p>
+                                <ul>
+                                    <li>تتبع الطلبات السابقة</li>
+                                    <li>الحفظ في المفضلة</li>
+                                    <li>عروض حصرية للأعضاء</li>
+                                    <li>تجربة تسوق أسرع</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف أعدل بيانات حسابي؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>لتعديل بيانات حسابك:</p>
+                                <ol>
+                                    <li>سجل الدخول إلى حسابك</li>
+                                    <li>انقر على "بياناتي الشخصية"</li>
+                                    <li>عدل البيانات المطلوبة</li>
+                                    <li>احفظ التعديلات</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search" style="font-size: 4rem; color: var(--gray-color); margin-bottom: 20px;"></i>
+                    <h3 style="color: var(--gray-color); margin-bottom: 10px;">لم نعثر على نتائج</h3>
+                    <p style="color: var(--gray-color);">جرب البحث بكلمات أخرى أو استعرض جميع الأسئلة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-support">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-text">
+                    <h2>لم تجد إجابتك؟</h2>
+                    <p>فريق الدعم لدينا جاهز لمساعدتك في أي وقت</p>
+                </div>
+                <div class="support-actions">
+                    <a href="index.html#contact" class="support-btn primary">
+                        <i class="fas fa-headset"></i>
+                        اتصل بنا
+                    </a>
+                    <a href="https://wa.me/+201149096207" class="support-btn secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب
+                    </a>
+                    <a href="nadym1143@gmail.com" class="support-btn secondary">
+                        <i class="fas fa-envelope"></i>
+                        بريد إلكتروني
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الأزياء</h3>
+                    <p>وجهتك الأولى لشراء الملابس عبر الإنترنت</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#products">المنتجات</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>خدمة العملاء</h3>
+                    <ul>
+                        <li><a href="shipping.html">الشحن والتوصيل</a></li>
+                        <li><a href="return.html">الإرجاع والاستبدال</a></li>
+                        <li><a href="faq.html" class="active">الأسئلة الشائعة</a></li>
+                        <li><a href="tracking.html">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <input type="email" placeholder="اشترك في النشرة البريدية">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر الأزياء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items"> </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 $</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>
