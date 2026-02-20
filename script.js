@@ -66,7 +66,7 @@ const products = [
         price: 199.99,
         originalPrice: 249.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop",
+        image: "Product Image/جاكت.jpg",
         badge: "محدود",
         rating: 4.9,
         reviews: 89
@@ -86,7 +86,7 @@ const products = [
         price: 299.99,
         originalPrice: 399.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop",
+        image: "Product Image/بدلة رجالي.jpg",
         badge: "عرض خاص",
         rating: 4.8,
         reviews: 56
@@ -104,10 +104,10 @@ const products = [
     },
     {
         id: 11,
-        name: "كنزة أطفال",
+        name: "سويت شيرت أطفال",
         price: 45.99,
         category: "kids",
-        image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=400&h=500&fit=crop",
+        image: "Product Image/سويت شيرت.jpg",
         badge: "شتوي",
         rating: 4.3,
         reviews: 19
@@ -117,7 +117,7 @@ const products = [
         name: "قميص رجالي كاجوال",
         price: 79.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=500&fit=crop",
+        image: "Product Image/قميص كاجول.jpg",
         rating: 4.4,
         reviews: 38
     },
@@ -127,7 +127,7 @@ const products = [
         price: 99.99,
         originalPrice: 129.99,
         category: "women",
-        image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop",
+        image: "Product Image/بنطلون جينز نسائي.jpg",
         badge: "الأكثر مبيعاً",
         rating: 4.7,
         reviews: 78
@@ -137,25 +137,25 @@ const products = [
         name: "حذاء أطفال رياضي",
         price: 65.99,
         category: "kids",
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop",
+        image: "Product Image/حذاء.jpg",
         badge: "جديد",
         rating: 4.5,
         reviews: 24
     },
     {
         id: 15,
-        name: "سواريت رجالي",
+        name: "بلوفر رجالي",
         price: 159.99,
         originalPrice: 209.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop",
+        image: "Product Image/بلوفر.jpg",
         badge: "عرض",
         rating: 4.6,
         reviews: 31
     },
     {
         id: 16,
-        name: "فستان",
+        name: "فستان ميدي",
         price: 249.99,
         originalPrice: 329.99,
         category: "women",
@@ -166,21 +166,21 @@ const products = [
     },
     {
         id: 17,
-        name: "ملابس سباحة أطفال",
+        name: "بدلة سباحة أطفال",
         price: 35.99,
         category: "kids",
-        image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=400&h=500&fit=crop",
+        image: "Product Image/ملابس سباحة اطفالي.jpg",
         badge: "صيفي",
         rating: 4.2,
         reviews: 15
     },
     {
         id: 18,
-        name: "معطف شتوي رجالي",
+        name: "جاكت كوخ رجالي",
         price: 349.99,
         originalPrice: 449.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=500&fit=crop",
+        image: "Product Image/بالطو.jpg",
         badge: "محدود",
         rating: 4.8,
         reviews: 47
@@ -190,7 +190,7 @@ const products = [
         name: "شال نسائي",
         price: 29.99,
         category: "women",
-        image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=500&fit=crop",
+        image: "Product Image/شال.jpg",
         rating: 4.3,
         reviews: 29
     },
@@ -199,7 +199,7 @@ const products = [
         name: "طاقية أطفال",
         price: 19.99,
         category: "kids",
-        image: "https://images.unsplash.com/photo-1523381134737-8e0e921956bd?w=400&h=500&fit=crop",
+        image: "Product Image/طاقية.jpg",
         badge: "جديد",
         rating: 4.1,
         reviews: 22
@@ -210,7 +210,7 @@ const products = [
         price: 89.99,
         originalPrice: 119.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop",
+        image: "Product Image/حقيبة رجالي.jpg",
         badge: "عرض",
         rating: 4.5,
         reviews: 41
@@ -220,7 +220,7 @@ const products = [
         name: "حذاء كعب عالي",
         price: 129.99,
         category: "women",
-        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=500&fit=crop",
+        image: "Product Image/كعب.jpg",
         badge: "أنيق",
         rating: 4.7,
         reviews: 58
@@ -230,7 +230,7 @@ const products = [
         name: "حقيبة ظهر أطفال",
         price: 39.99,
         category: "kids",
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=500&fit=crop",
+        image: "Product Image/حقيبة.jpg",
         rating: 4.4,
         reviews: 17
     },
@@ -240,7 +240,7 @@ const products = [
         price: 49.99,
         originalPrice: 69.99,
         category: "men",
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=500&fit=crop",
+        image: "Product Image/نظارة.jpg",
         badge: "صيفي",
         rating: 4.6,
         reviews: 33
